@@ -31,19 +31,22 @@ class CalendarroDayItem extends StatelessWidget {
     }
 
     return Expanded(
-        child: GestureDetector(
-          child: Container(
-              height: 40.0,
-              decoration: boxDecoration,
-              child: Center(
-                  child: Text(
-                    "${date.day}",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: textColor),
-                  ))),
-          onTap: handleTap,
-          behavior: HitTestBehavior.translucent,
-        ));
+      child: GestureDetector(
+        child: Container(
+          height: 40.0,
+          decoration: boxDecoration,
+          child: Center(
+            child: Text(
+              "${date.day}",
+              textAlign: TextAlign.center,
+              style: TextStyle(color: textColor),
+            ),
+          ),
+        ),
+        onTap: handleTap,
+        behavior: HitTestBehavior.translucent,
+      ),
+    );
   }
 
   void handleTap() {
